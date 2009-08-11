@@ -16,9 +16,12 @@ def q eng, span
   new_question eng, span
 end
 
-q 'fork', 'tenedor'
-q 'spoon', 'cuchara'
-q 'knife', 'cuchillo'
+h = {'fork' => 'tenedor', 'spoon' => 'cuchara', 'knife' => 'cuchillo'}
 
+puts 'Welcome to Language Checker!'
+
+h.each do |eng, span|
+  q eng, span
+end
 # EOF
 
