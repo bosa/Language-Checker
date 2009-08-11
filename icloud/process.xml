@@ -1,0 +1,31 @@
+<process name="lang_checker">
+  <trigger component="btn_check" event="Select" step="check" view="lang_checker"/>
+
+  <step id="1" name="Open Application">
+    <operation name="open" value="xios://Documents/MyApps/lang_checker/ui.xml"/>
+  </step>
+
+  <step id="check">
+    <operation name="decision" value="#lang_checker#in_answer">
+      <when test="text() = 'calle'" step="correct"/>
+      <otherwise step="incorrect"/>
+    </operation>
+  </step>
+
+  <step id="correct">
+    <operation name="callMethod" value="#lang_checker#lbl_result">
+      <method name="setValue">
+        <param type="string">Correcto!</param>
+      </method>
+    </operation>
+  </step>
+
+  <step id="incorrect">
+    <operation name="callMethod" value="#lang_checker#lbl_result">
+      <method name="setValue">
+        <param type="string">Incorrecto!</param>
+      </method>
+    </operation>
+  </step>
+
+</process>

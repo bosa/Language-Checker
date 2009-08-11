@@ -1,0 +1,12 @@
+<view author="XideZone" company="" copyright="" created="2007-06-25" height="400" icon="" look="xidezone" name="lang_checker" resize="true" revised="2007-12-19" splash="false" title="Lang Checker Application" version="1.1" width="300">
+
+  <panel type="row">
+
+    <input label="Ange 'gata' på spanska" name="in_answer" tabindex="1" width="200"/>
+    <button name="btn_check" text="Check me"/>
+
+    <label name="lbl_result">-</label>
+
+  </panel>
+
+</view>
